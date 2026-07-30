@@ -112,10 +112,10 @@ export default function Home() {
             {t("nav.work")}
           </a>
           <a
-            href="#testimonials"
+            href="#professional_experience"
             className="text-sm font-medium text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
           >
-            {t("nav.testimonials")}
+            {t("nav.professionalExperience")}
           </a>
           <a
             href="#contact"
@@ -175,7 +175,10 @@ export default function Home() {
       </header>
 
       {/* HERO SECTION */}
-      <section className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 px-6 py-20 md:grid-cols-2 md:px-16 md:py-32">
+      <section
+        id="about"
+        className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 px-6 py-20 md:grid-cols-2 md:px-16 md:py-32"
+      >
         <div className="order-2 flex flex-col gap-8 md:order-1">
           <h1 className="text-4xl font-bold tracking-tight md:text-6xl">
             {t("hero.greeting")}{" "}
@@ -421,56 +424,15 @@ export default function Home() {
                   {t("experience.roles.frontend")}
                 </h3>
                 <ul className="flex list-inside list-disc flex-col gap-2 text-zinc-600 dark:text-zinc-400">
-                  <li>
-                    Atuei como Desenvolvedor Frontend no desenvolvimento de um
-                    sistema SaaS voltado para pesquisas quantitativas e
-                    qualitativas, sendo o principal responsável por essa frente.
-                  </li>
-                  <li>
-                    Participei desde a definição da arquitetura até a
-                    implementação das interfaces, com foco em entregar uma
-                    experiência de usuário robusta, intuitiva e escalável.
-                  </li>
-                  <li>
-                    Utilizei React, Next.js, Tailwind CSS, Flexbox, CSS Grid,
-                    Zod e React Hook Form na construção da aplicação, aplicando
-                    amplamente React Hooks e componentização para criar
-                    componentes reutilizáveis e de fácil manutenção.
-                  </li>
-                  <li>
-                    Utilizei princípios de Clean Code e Design Patterns na
-                    construção das interfaces, visando um código mais legível,
-                    testável e escalável.
-                  </li>
-                  <li>
-                    Escrevi testes unitários com Jest, seguindo práticas de BDD
-                    (Behavior Driven Development) para validar o comportamento
-                    esperado das funcionalidades.
-                  </li>
-                  <li>
-                    Além do produto principal, também fui responsável pela
-                    otimização e manutenção dos ativos digitais da empresa,
-                    incluindo sites, landing pages e aplicação mobile em React
-                    Native, garantindo consistência visual e qualidade em
-                    diferentes plataformas.
-                  </li>
-                  <li>
-                    Atuei no desenvolvimento backend utilizando NestJS e Prisma
-                    ORM, com foco na criação e evolução de APIs e novas
-                    funcionalidades da aplicação.
-                  </li>
-                  <li>
-                    Fui responsável pela implementação de endpoints, regras de
-                    negócio, integrações e operações com banco de dados,
-                    buscando manter o código organizado, escalável e de fácil
-                    manutenção.
-                  </li>
-                  <li>
-                    Também utilizei validações de dados por meio de DTOs,
-                    class-validator e class-transformer, assegurando a
-                    integridade das informações e a padronização das entradas e
-                    saídas da API.
-                  </li>
+                  <li>{t("experience.job1.bullet1")}</li>
+                  <li>{t("experience.job1.bullet2")}</li>
+                  <li>{t("experience.job1.bullet3")}</li>
+                  <li>{t("experience.job1.bullet4")}</li>
+                  <li>{t("experience.job1.bullet5")}</li>
+                  <li>{t("experience.job1.bullet6")}</li>
+                  <li>{t("experience.job1.bullet7")}</li>
+                  <li>{t("experience.job1.bullet8")}</li>
+                  <li>{t("experience.job1.bullet9")}</li>
                 </ul>
               </div>
               <div className="text-left text-zinc-600 md:w-1/5 md:text-right dark:text-zinc-400">
@@ -487,7 +449,7 @@ export default function Home() {
                   className="inline-block transition-transform hover:scale-105"
                 >
                   <h4 className="text-xl font-bold tracking-tighter text-emerald-500 hover:text-emerald-400">
-                    userx
+                    X-Solution
                   </h4>
                 </a>
               </div>
@@ -496,18 +458,18 @@ export default function Home() {
                   {t("experience.roles.teamLead")}
                 </h3>
                 <ul className="flex list-inside list-disc flex-col gap-2 text-zinc-600 dark:text-zinc-400">
-                  <li>
-                    Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem accusantium doloremque laudantium.
-                  </li>
-                  <li>
-                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-                    odit aut fugit.
-                  </li>
-                  <li>
-                    Sed quia consequuntur magni dolores eos qui ratione
-                    voluptatem sequi nesciunt.
-                  </li>
+                  <li>{t("experience.job2.bullet1")}</li>
+                  <li>{t("experience.job2.bullet2")}</li>
+                  <li>{t("experience.job2.bullet3")}</li>
+                  <li>{t("experience.job2.bullet4")}</li>
+                  <li>{t("experience.job2.bullet5")}</li>
+                  <li>{t("experience.job2.bullet6")}</li>
+                  <li>{t("experience.job2.bullet7")}</li>
+                  <li>{t("experience.job2.bullet8")}</li>
+                  <li>{t("experience.job2.bullet9")}</li>
+                  <li>{t("experience.job2.bullet10")}</li>
+                  <li>{t("experience.job2.bullet11")}</li>
+                  <li>{t("experience.job2.bullet12")}</li>
                 </ul>
               </div>
               <div className="text-left text-zinc-600 md:w-1/5 md:text-right dark:text-zinc-400">
@@ -533,9 +495,7 @@ export default function Home() {
                   {t("experience.roles.fullstack")}
                 </h3>
                 <ul className="flex list-inside list-disc flex-col gap-2 text-zinc-600 dark:text-zinc-400">
-                  <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </li>
+                  <li>{t("experience.job3.bullet1")}</li>
                 </ul>
               </div>
               <div className="text-left text-zinc-600 md:w-1/5 md:text-right dark:text-zinc-400">
