@@ -32,7 +32,7 @@ import {
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Sagar | Portfolio" },
+    { title: "Ícaro Almeida | Portfolio" },
     { name: "description", content: "Personal Portfolio Website" },
   ];
 }
@@ -141,9 +141,14 @@ export default function Home() {
                 <SelectItem value="es">ES</SelectItem>
               </SelectContent>
             </Select>
-            <Button className="bg-zinc-900 text-zinc-50 hover:bg-zinc-800 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-200">
+            <a
+              href="https://drive.google.com/file/d/1e9Cm8Nb8JSvctGFN1tbMYWXk4QjaiHKv/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="focus-visible:ring-ring inline-flex h-9 items-center justify-center rounded-md bg-zinc-900 px-4 py-2 text-sm font-medium text-zinc-50 shadow transition-colors hover:bg-zinc-800 focus-visible:ring-1 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-200"
+            >
               {t("nav.downloadCV")}
-            </Button>
+            </a>
           </div>
         </nav>
 
@@ -178,7 +183,7 @@ export default function Home() {
               👋
             </span>
           </h1>
-          <p className="max-w-lg text-lg leading-relaxed text-zinc-600 md:text-xl dark:text-zinc-400">
+          <p className="max-w-4xl text-lg leading-relaxed text-zinc-600 md:text-xl dark:text-zinc-400">
             {t("hero.description")}
           </p>
 
@@ -197,10 +202,11 @@ export default function Home() {
           </div>
 
           <div className="mt-2 flex gap-4">
-            <Button
-              variant="ghost"
-              size="icon"
-              className="text-zinc-600 hover:bg-zinc-200 hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-zinc-50"
+            <a
+              href="https://github.com/icaroregis"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-md text-zinc-600 transition-colors hover:bg-zinc-200 hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-zinc-50"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -216,11 +222,12 @@ export default function Home() {
                 <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
                 <path d="M9 18c-4.51 2-5-2-7-2" />
               </svg>
-            </Button>
-            <Button
-              variant="ghost"
-              size="icon"
-              className="text-zinc-600 hover:bg-zinc-200 hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-zinc-50"
+            </a>
+            <a
+              href="https://www.linkedin.com/in/icaroregisalmeida/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-md text-zinc-600 transition-colors hover:bg-zinc-200 hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-zinc-50"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -233,13 +240,16 @@ export default function Home() {
                 strokeLinecap="round"
                 strokeLinejoin="round"
               >
-                <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect width="4" height="12" x="2" y="9" />
+                <circle cx="4" cy="4" r="2" />
               </svg>
-            </Button>
-            <Button
-              variant="ghost"
-              size="icon"
-              className="text-zinc-600 hover:bg-zinc-200 hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-zinc-50"
+            </a>
+            <a
+              href="https://icaroregis.github.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-md text-zinc-600 transition-colors hover:bg-zinc-200 hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-zinc-50"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -252,72 +262,28 @@ export default function Home() {
                 strokeLinecap="round"
                 strokeLinejoin="round"
               >
-                <path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z" />
-                <path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z" />
-                <path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z" />
-                <path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z" />
-                <path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z" />
+                <circle cx="12" cy="12" r="10" />
+                <line x1="2" x2="22" y1="12" y2="12" />
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
               </svg>
-            </Button>
+            </a>
           </div>
         </div>
 
         <div className="order-1 flex justify-center md:order-2 md:justify-end">
-          <div className="relative mt-8 h-72 w-64 md:mt-0 md:h-96 md:w-80">
-            <div className="absolute inset-0 -z-10 translate-x-6 translate-y-6 transform bg-zinc-200 dark:bg-zinc-800"></div>
+          <div className="group relative mt-8 h-72 w-64 md:mt-0 md:h-96 md:w-80">
+            {/* Efeito de brilho/sombra verde ao redor - Estático e muito mais intenso */}
+            <div className="absolute -inset-4 rounded-2xl bg-emerald-500 opacity-80 blur-2xl transition duration-500 group-hover:opacity-100 group-hover:blur-3xl dark:opacity-60 dark:group-hover:opacity-100"></div>
+
+            {/* Moldura deslocada com borda verde - Fundo preenchido para dar mais peso */}
+            <div className="absolute inset-0 -z-10 translate-x-4 translate-y-4 rounded-2xl border-4 border-emerald-500 bg-emerald-500/10 transition-transform duration-500 group-hover:translate-x-6 group-hover:translate-y-6"></div>
+
+            {/* Imagem com borda sutil */}
             <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop"
+              src="/eu.png"
               alt="Profile"
-              className="h-full w-full border-8 border-zinc-50 object-cover dark:border-zinc-950"
+              className="relative h-full w-full rounded-2xl border-4 border-white object-cover shadow-[0_0_40px_-10px_rgba(16,185,129,0.5)] transition-transform duration-500 group-hover:-translate-y-2 dark:border-zinc-900"
             />
-          </div>
-        </div>
-      </section>
-
-      {/* ABOUT SECTION */}
-      <section
-        id="about"
-        className="bg-zinc-100/50 px-6 py-24 md:px-16 dark:bg-zinc-900/50"
-      >
-        <div className="mx-auto max-w-7xl">
-          <div className="mb-12 flex justify-center">
-            <Badge
-              variant="secondary"
-              className="rounded-full bg-zinc-200 px-4 py-1 text-sm text-zinc-700 hover:bg-zinc-300 dark:bg-zinc-800 dark:text-zinc-300 dark:hover:bg-zinc-700"
-            >
-              {t("about.badge")}
-            </Badge>
-          </div>
-
-          <div className="grid grid-cols-1 items-start gap-16 md:grid-cols-2">
-            <div className="flex justify-center md:justify-start">
-              <div className="relative h-80 w-64 md:h-[480px] md:w-[400px]">
-                <div className="absolute inset-0 -z-10 -translate-x-6 translate-y-6 transform bg-zinc-200 dark:bg-zinc-800"></div>
-                <img
-                  src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=400&auto=format&fit=crop"
-                  alt="About"
-                  className="h-full w-full border-8 border-zinc-100 object-cover dark:border-zinc-900"
-                />
-              </div>
-            </div>
-
-            <div className="flex flex-col gap-6">
-              <h3 className="text-2xl font-bold tracking-tight md:text-3xl">
-                {t("about.title")}
-              </h3>
-              <div className="flex flex-col gap-4 leading-relaxed text-zinc-600 dark:text-zinc-400">
-                <p>{t("about.p1")}</p>
-                <p>{t("about.p2")}</p>
-                <p>{t("about.p3")}</p>
-                <p>{t("about.p4")}</p>
-                <p>{t("about.p5")}</p>
-                <ul className="mt-2 grid list-inside list-disc grid-cols-1 gap-2 pl-4 text-zinc-700 sm:grid-cols-2 dark:text-zinc-300">
-                  <li>{t("about.bullet1")}</li>
-                  <li>{t("about.bullet2")}</li>
-                  <li>{t("about.bullet3")}</li>
-                </ul>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -425,7 +391,7 @@ export default function Home() {
         id="experience"
         className="bg-zinc-100/50 px-6 py-24 md:px-16 dark:bg-zinc-900/50"
       >
-        <div className="mx-auto flex max-w-4xl flex-col items-center">
+        <div className="mx-auto flex max-w-5xl flex-col items-center">
           <Badge
             variant="secondary"
             className="mb-6 rounded-full bg-zinc-200 px-4 py-1 text-sm text-zinc-700 hover:bg-zinc-300 dark:bg-zinc-800 dark:text-zinc-300 dark:hover:bg-zinc-700"
@@ -438,39 +404,94 @@ export default function Home() {
 
           <div className="flex w-full flex-col gap-8">
             <div className="flex flex-col gap-8 rounded-xl border border-zinc-200 bg-white p-8 shadow-sm md:flex-row dark:border-zinc-800 dark:bg-zinc-900 dark:shadow-lg">
-              <div className="md:w-1/4">
-                <h4 className="text-xl font-bold tracking-tighter text-emerald-500">
-                  upwork
-                </h4>
+              <div className="md:w-1/5">
+                <a
+                  href="https://www.linkedin.com/company/userx/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block transition-transform hover:scale-105"
+                >
+                  <h4 className="text-xl font-bold tracking-tighter text-emerald-500 hover:text-emerald-400">
+                    userx
+                  </h4>
+                </a>
               </div>
-              <div className="flex flex-col gap-4 md:w-2/4">
+              <div className="flex flex-col gap-4 md:w-3/5">
                 <h3 className="text-xl font-bold text-zinc-900 dark:text-zinc-100">
                   {t("experience.roles.frontend")}
                 </h3>
                 <ul className="flex list-inside list-disc flex-col gap-2 text-zinc-600 dark:text-zinc-400">
                   <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Atuei como Desenvolvedor Frontend no desenvolvimento de um
+                    sistema SaaS voltado para pesquisas quantitativas e
+                    qualitativas, sendo o principal responsável por essa frente.
                   </li>
                   <li>
-                    Ut pretium arcu et massa semper, id fringilla leo
-                    consectetur.
+                    Participei desde a definição da arquitetura até a
+                    implementação das interfaces, com foco em entregar uma
+                    experiência de usuário robusta, intuitiva e escalável.
                   </li>
-                  <li>Aenean lacinia bibendum nulla sed consectetur.</li>
-                  <li>Sed posuere consectetur est at lobortis.</li>
+                  <li>
+                    Utilizei React, Next.js, Tailwind CSS, Flexbox, CSS Grid,
+                    Zod e React Hook Form na construção da aplicação, aplicando
+                    amplamente React Hooks e componentização para criar
+                    componentes reutilizáveis e de fácil manutenção.
+                  </li>
+                  <li>
+                    Utilizei princípios de Clean Code e Design Patterns na
+                    construção das interfaces, visando um código mais legível,
+                    testável e escalável.
+                  </li>
+                  <li>
+                    Escrevi testes unitários com Jest, seguindo práticas de BDD
+                    (Behavior Driven Development) para validar o comportamento
+                    esperado das funcionalidades.
+                  </li>
+                  <li>
+                    Além do produto principal, também fui responsável pela
+                    otimização e manutenção dos ativos digitais da empresa,
+                    incluindo sites, landing pages e aplicação mobile em React
+                    Native, garantindo consistência visual e qualidade em
+                    diferentes plataformas.
+                  </li>
+                  <li>
+                    Atuei no desenvolvimento backend utilizando NestJS e Prisma
+                    ORM, com foco na criação e evolução de APIs e novas
+                    funcionalidades da aplicação.
+                  </li>
+                  <li>
+                    Fui responsável pela implementação de endpoints, regras de
+                    negócio, integrações e operações com banco de dados,
+                    buscando manter o código organizado, escalável e de fácil
+                    manutenção.
+                  </li>
+                  <li>
+                    Também utilizei validações de dados por meio de DTOs,
+                    class-validator e class-transformer, assegurando a
+                    integridade das informações e a padronização das entradas e
+                    saídas da API.
+                  </li>
                 </ul>
               </div>
-              <div className="text-left text-zinc-600 md:w-1/4 md:text-right dark:text-zinc-400">
+              <div className="text-left text-zinc-600 md:w-1/5 md:text-right dark:text-zinc-400">
                 {t("experience.dates.present")}
               </div>
             </div>
 
             <div className="flex flex-col gap-8 rounded-xl border border-zinc-200 bg-white p-8 shadow-sm md:flex-row dark:border-zinc-800 dark:bg-zinc-900 dark:shadow-lg">
-              <div className="md:w-1/4">
-                <h4 className="text-xl font-bold tracking-tighter text-emerald-500">
-                  upwork
-                </h4>
+              <div className="md:w-1/5">
+                <a
+                  href="https://www.linkedin.com/company/userx/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block transition-transform hover:scale-105"
+                >
+                  <h4 className="text-xl font-bold tracking-tighter text-emerald-500 hover:text-emerald-400">
+                    userx
+                  </h4>
+                </a>
               </div>
-              <div className="flex flex-col gap-4 md:w-2/4">
+              <div className="flex flex-col gap-4 md:w-3/5">
                 <h3 className="text-xl font-bold text-zinc-900 dark:text-zinc-100">
                   {t("experience.roles.teamLead")}
                 </h3>
@@ -489,18 +510,25 @@ export default function Home() {
                   </li>
                 </ul>
               </div>
-              <div className="text-left text-zinc-600 md:w-1/4 md:text-right dark:text-zinc-400">
+              <div className="text-left text-zinc-600 md:w-1/5 md:text-right dark:text-zinc-400">
                 {t("experience.dates.past1")}
               </div>
             </div>
 
             <div className="flex flex-col gap-8 rounded-xl border border-zinc-200 bg-white p-8 shadow-sm md:flex-row dark:border-zinc-800 dark:bg-zinc-900 dark:shadow-lg">
-              <div className="md:w-1/4">
-                <h4 className="text-xl font-bold tracking-tighter text-emerald-500">
-                  upwork
-                </h4>
+              <div className="md:w-1/5">
+                <a
+                  href="https://www.linkedin.com/company/userx/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block transition-transform hover:scale-105"
+                >
+                  <h4 className="text-xl font-bold tracking-tighter text-emerald-500 hover:text-emerald-400">
+                    userx
+                  </h4>
+                </a>
               </div>
-              <div className="flex flex-col gap-4 md:w-2/4">
+              <div className="flex flex-col gap-4 md:w-3/5">
                 <h3 className="text-xl font-bold text-zinc-900 dark:text-zinc-100">
                   {t("experience.roles.fullstack")}
                 </h3>
@@ -510,7 +538,7 @@ export default function Home() {
                   </li>
                 </ul>
               </div>
-              <div className="text-left text-zinc-600 md:w-1/4 md:text-right dark:text-zinc-400">
+              <div className="text-left text-zinc-600 md:w-1/5 md:text-right dark:text-zinc-400">
                 {t("experience.dates.past2")}
               </div>
             </div>
