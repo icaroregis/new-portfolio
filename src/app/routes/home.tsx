@@ -71,7 +71,7 @@ function ThemeToggle() {
 }
 
 export default function Home() {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
@@ -101,25 +101,25 @@ export default function Home() {
             href="#about"
             className="text-sm font-medium text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
           >
-            About
+            {t("nav.about")}
           </a>
           <a
             href="#work"
             className="text-sm font-medium text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
           >
-            Work
+            {t("nav.work")}
           </a>
           <a
             href="#testimonials"
             className="text-sm font-medium text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
           >
-            Testimonials
+            {t("nav.testimonials")}
           </a>
           <a
             href="#contact"
             className="text-sm font-medium text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
           >
-            Contact
+            {t("nav.contact")}
           </a>
 
           <div className="h-6 w-px bg-zinc-300 dark:bg-zinc-800"></div>
@@ -127,7 +127,7 @@ export default function Home() {
           <div className="flex items-center gap-4">
             <ThemeToggle />
             <Select
-              value={i18n.resolvedLanguage || "en"}
+              value={i18n.resolvedLanguage || "pt"}
               onValueChange={toggleLanguage}
             >
               <SelectTrigger className="h-9 w-[80px] border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-900">
@@ -140,7 +140,7 @@ export default function Home() {
               </SelectContent>
             </Select>
             <Button className="bg-zinc-900 text-zinc-50 hover:bg-zinc-800 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-200">
-              Download CV
+              {t("nav.downloadCV")}
             </Button>
           </div>
         </nav>
@@ -148,6 +148,19 @@ export default function Home() {
         {/* Mobile Menu Icon */}
         <div className="flex items-center gap-2 md:hidden">
           <ThemeToggle />
+          <Select
+            value={i18n.resolvedLanguage || "pt"}
+            onValueChange={toggleLanguage}
+          >
+            <SelectTrigger className="h-9 w-[70px] border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-900">
+              <SelectValue placeholder="Lang" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="en">EN</SelectItem>
+              <SelectItem value="pt">PT</SelectItem>
+              <SelectItem value="es">ES</SelectItem>
+            </SelectContent>
+          </Select>
           <Button variant="ghost" size="icon">
             <Menu className="h-6 w-6" />
           </Button>
@@ -158,30 +171,26 @@ export default function Home() {
       <section className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 px-6 py-20 md:grid-cols-2 md:px-16 md:py-32">
         <div className="order-2 flex flex-col gap-8 md:order-1">
           <h1 className="text-4xl font-bold tracking-tight md:text-6xl">
-            Hi, I'm Sagar{" "}
+            {t("hero.greeting")}{" "}
             <span className="inline-block origin-[70%_70%] cursor-default hover:animate-bounce">
               👋
             </span>
           </h1>
           <p className="max-w-lg text-lg leading-relaxed text-zinc-600 md:text-xl dark:text-zinc-400">
-            I'm a full stack developer (React.js & Node.js) with a focus on
-            creating (and occasionally designing) exceptional digital
-            experiences that are fast, accessible, visually appealing, and
-            responsive. Even though I have been creating web applications for
-            over 7 years, I still love it as if it was something new.
+            {t("hero.description")}
           </p>
 
           <div className="flex flex-col gap-3">
             <div className="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
               <MapPin className="h-5 w-5" />
-              <span>Ahmedabad, India</span>
+              <span>{t("hero.location")}</span>
             </div>
             <div className="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
               <span className="relative mr-1 ml-1 flex h-3 w-3">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex h-3 w-3 rounded-full bg-emerald-500"></span>
               </span>
-              <span>Available for new projects</span>
+              <span>{t("hero.available")}</span>
             </div>
           </div>
 
@@ -274,7 +283,7 @@ export default function Home() {
               variant="secondary"
               className="rounded-full bg-zinc-200 px-4 py-1 text-sm text-zinc-700 hover:bg-zinc-300 dark:bg-zinc-800 dark:text-zinc-300 dark:hover:bg-zinc-700"
             >
-              About me
+              {t("about.badge")}
             </Badge>
           </div>
 
@@ -292,42 +301,18 @@ export default function Home() {
 
             <div className="flex flex-col gap-6">
               <h3 className="text-2xl font-bold tracking-tight md:text-3xl">
-                Curious about me? Here you have it:
+                {t("about.title")}
               </h3>
               <div className="flex flex-col gap-4 leading-relaxed text-zinc-600 dark:text-zinc-400">
-                <p>
-                  I'm a passionate, self-proclaimed designer who specializes in
-                  full stack development (React.js & Node.js). I am very
-                  enthusiastic about bringing the technical and visual aspects
-                  of digital products to life. User experience, pixel perfect
-                  design, and writing clear, readable, highly performant code
-                  matters to me.
-                </p>
-                <p>
-                  I began my journey as a web developer in 2015, and since then,
-                  I've continued to grow and evolve as a developer, taking on
-                  new challenges and learning the latest technologies along the
-                  way. Now, in my early thirties, 7 years after starting my web
-                  development journey, I'm building cutting-edge web
-                  applications using modern technologies such as Next.js,
-                  TypeScript, Nestjs, Tailwindcss, Supabase and much more.
-                </p>
-                <p>
-                  I am very much a progressive thinker and enjoy working on
-                  products end to end, from ideation all the way to development.
-                </p>
-                <p>
-                  When I'm not in full-on developer mode, you can find me
-                  hovering around on twitter or on indie hacker, witnessing the
-                  journey of early startups or enjoying some free time. You can
-                  follow me on Twitter where I share tech-related bites and
-                  build in public, or you can follow me on GitHub.
-                </p>
-                <p>Finally, some quick bits about me.</p>
+                <p>{t("about.p1")}</p>
+                <p>{t("about.p2")}</p>
+                <p>{t("about.p3")}</p>
+                <p>{t("about.p4")}</p>
+                <p>{t("about.p5")}</p>
                 <ul className="mt-2 grid list-inside list-disc grid-cols-1 gap-2 pl-4 text-zinc-700 sm:grid-cols-2 dark:text-zinc-300">
-                  <li>B.E. in Computer Engineering</li>
-                  <li>Avid learner</li>
-                  <li>Full time freelancer</li>
+                  <li>{t("about.bullet1")}</li>
+                  <li>{t("about.bullet2")}</li>
+                  <li>{t("about.bullet3")}</li>
                 </ul>
               </div>
             </div>
@@ -342,10 +327,10 @@ export default function Home() {
             variant="secondary"
             className="mb-6 rounded-full bg-zinc-200 px-4 py-1 text-sm text-zinc-700 hover:bg-zinc-300 dark:bg-zinc-800 dark:text-zinc-300 dark:hover:bg-zinc-700"
           >
-            Skills
+            {t("skills.badge")}
           </Badge>
           <p className="mb-12 max-w-2xl text-center text-lg text-zinc-600 md:text-xl dark:text-zinc-400">
-            The skills, tools and technologies I am really good at:
+            {t("skills.title")}
           </p>
 
           <div className="grid w-full grid-cols-3 gap-x-8 gap-y-12 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8">
@@ -443,10 +428,10 @@ export default function Home() {
             variant="secondary"
             className="mb-6 rounded-full bg-zinc-200 px-4 py-1 text-sm text-zinc-700 hover:bg-zinc-300 dark:bg-zinc-800 dark:text-zinc-300 dark:hover:bg-zinc-700"
           >
-            Experience
+            {t("experience.badge")}
           </Badge>
           <p className="mb-12 max-w-2xl text-center text-lg text-zinc-600 md:text-xl dark:text-zinc-400">
-            Here is a quick summary of my most recent experiences:
+            {t("experience.title")}
           </p>
 
           <div className="flex w-full flex-col gap-8">
@@ -458,7 +443,7 @@ export default function Home() {
               </div>
               <div className="flex flex-col gap-4 md:w-2/4">
                 <h3 className="text-xl font-bold text-zinc-900 dark:text-zinc-100">
-                  Sr. Frontend Developer
+                  {t("experience.roles.frontend")}
                 </h3>
                 <ul className="flex list-inside list-disc flex-col gap-2 text-zinc-600 dark:text-zinc-400">
                   <li>
@@ -473,7 +458,7 @@ export default function Home() {
                 </ul>
               </div>
               <div className="text-left text-zinc-600 md:w-1/4 md:text-right dark:text-zinc-400">
-                Nov 2021 - Present
+                {t("experience.dates.present")}
               </div>
             </div>
 
@@ -485,7 +470,7 @@ export default function Home() {
               </div>
               <div className="flex flex-col gap-4 md:w-2/4">
                 <h3 className="text-xl font-bold text-zinc-900 dark:text-zinc-100">
-                  Team Lead
+                  {t("experience.roles.teamLead")}
                 </h3>
                 <ul className="flex list-inside list-disc flex-col gap-2 text-zinc-600 dark:text-zinc-400">
                   <li>
@@ -503,7 +488,7 @@ export default function Home() {
                 </ul>
               </div>
               <div className="text-left text-zinc-600 md:w-1/4 md:text-right dark:text-zinc-400">
-                Jul 2017 - Oct 2021
+                {t("experience.dates.past1")}
               </div>
             </div>
 
@@ -515,7 +500,7 @@ export default function Home() {
               </div>
               <div className="flex flex-col gap-4 md:w-2/4">
                 <h3 className="text-xl font-bold text-zinc-900 dark:text-zinc-100">
-                  Full Stack Developer
+                  {t("experience.roles.fullstack")}
                 </h3>
                 <ul className="flex list-inside list-disc flex-col gap-2 text-zinc-600 dark:text-zinc-400">
                   <li>
@@ -524,7 +509,7 @@ export default function Home() {
                 </ul>
               </div>
               <div className="text-left text-zinc-600 md:w-1/4 md:text-right dark:text-zinc-400">
-                Dec 2015 - May 2017
+                {t("experience.dates.past2")}
               </div>
             </div>
           </div>
@@ -538,10 +523,10 @@ export default function Home() {
             variant="secondary"
             className="mb-6 rounded-full bg-zinc-200 px-4 py-1 text-sm text-zinc-700 hover:bg-zinc-300 dark:bg-zinc-800 dark:text-zinc-300 dark:hover:bg-zinc-700"
           >
-            Work
+            {t("work.badge")}
           </Badge>
           <p className="mb-12 max-w-2xl text-center text-lg text-zinc-600 md:text-xl dark:text-zinc-400">
-            Some of the noteworthy projects I have built:
+            {t("work.title")}
           </p>
 
           <div className="flex w-full flex-col gap-12 md:gap-24">
@@ -558,10 +543,7 @@ export default function Home() {
                   Fiskil
                 </h3>
                 <p className="leading-relaxed text-zinc-600 dark:text-zinc-400">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Maecenas nec urna ac tellus volutpat viverra. Vestibulum ante
-                  ipsum primis in faucibus orci luctus et ultrices posuere
-                  cubilia curae.
+                  {t("work.projectDesc")}
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {[
@@ -622,10 +604,7 @@ export default function Home() {
                   Fiskil
                 </h3>
                 <p className="leading-relaxed text-zinc-600 dark:text-zinc-400">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Maecenas nec urna ac tellus volutpat viverra. Vestibulum ante
-                  ipsum primis in faucibus orci luctus et ultrices posuere
-                  cubilia curae.
+                  {t("work.projectDesc")}
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {[
@@ -682,11 +661,10 @@ export default function Home() {
           variant="secondary"
           className="mb-6 rounded-full bg-zinc-200 px-4 py-1 text-sm text-zinc-700 hover:bg-zinc-300 dark:bg-zinc-800 dark:text-zinc-300 dark:hover:bg-zinc-700"
         >
-          Get in touch
+          {t("contact.badge")}
         </Badge>
         <p className="mx-auto mb-12 max-w-2xl text-lg text-zinc-600 dark:text-zinc-400">
-          What's next? Feel free to reach out to me if you're looking for a
-          developer, have a query, or simply want to connect.
+          {t("contact.title")}
         </p>
         <div className="mb-16 flex flex-col items-center gap-4">
           <div className="flex items-center gap-4 text-2xl font-bold md:text-4xl">
