@@ -1,3 +1,8 @@
+import type { Route } from "./+types/root";
+import "./app.css";
+import "../lib/i18n";
+import { useTranslation } from "react-i18next";
+
 import {
   isRouteErrorResponse,
   Links,
@@ -7,10 +12,6 @@ import {
   ScrollRestoration,
 } from "react-router";
 
-import type { Route } from "./+types/root";
-import "./app.css";
-import "../lib/i18n";
-import { useTranslation } from "react-i18next";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
