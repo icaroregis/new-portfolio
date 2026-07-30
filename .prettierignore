@@ -1,0 +1,22 @@
+# Ignore formatting for chatmode files
+.github/chatmodes/*.md
+
+# Node modules
+node_modules/
+
+# Build output
+dist/
+build/
+.next/
+
+# Dependencies
+package-lock.json
+yarn.lock
+
+# Generated files
+*.generated.*
+*.min.js
+*.min.css
+
+# Other files to ignore from formatting
+# Add more patterns as needed
