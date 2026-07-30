@@ -93,7 +93,9 @@ export default function Home() {
     <div className="min-h-screen bg-zinc-50 font-sans text-zinc-900 transition-colors duration-300 dark:bg-zinc-950 dark:text-zinc-50">
       {/* HEADER / NAVBAR */}
       <header className="sticky top-0 z-50 flex items-center justify-between border-b border-zinc-200 bg-white/80 px-6 py-4 backdrop-blur-md md:px-16 dark:border-zinc-800 dark:bg-zinc-950/80">
-        <div className="text-2xl font-bold tracking-tighter">{"<SS/>"}</div>
+        <div className="font-['JetBrains_Mono'] text-2xl font-bold tracking-tighter text-emerald-500">
+          {"<ICARO ALMEIDA/>"}
+        </div>
 
         {/* Desktop Nav */}
         <nav className="hidden items-center gap-8 md:flex">
