@@ -111,6 +111,65 @@ export default {
     work: {
       badge: "Projects",
       title: "Some of the noteworthy projects I have built:",
+      project1: {
+        title: "UserX Hub — SaaS Platform for UX Research & Product",
+        description:
+          "I worked on the development of UserX Hub, a SaaS platform aimed at UX Research, Product, and Research Operations teams, centralizing the entire user research lifecycle.",
+        contributionsTitle: "Key contributions:",
+        contributions: [
+          "Evolution of features for unmoderated studies (surveys), including questionnaire creation, response experience, and data management.",
+          "Development of modules for moderated studies, participant scheduling, and financial dashboards.",
+          "Implementation of Artificial Intelligence-supported features for research assistance.",
+        ],
+        stackTitle: "Stack and Architecture:",
+        stack: [
+          "Frontend: Next.js (App Router), React, TypeScript, Tailwind CSS, Radix UI.",
+          "State & Data Management: React Query, Zustand, Axios.",
+          "Forms & Validation: React Hook Form, Zod.",
+          "Infrastructure & Quality: Domain-driven modular architecture, i18n, Sentry.",
+        ],
+      },
+
+      project2: {
+        title: "Virtual Process App — Mobile Data Management and Visualization",
+        description:
+          "Development of a mobile application focused on process management and data visualization, offering interactive dashboards and easy-to-navigate tables.",
+        contributionsTitle: "Key contributions:",
+        contributions: [
+          "Development of the entire user interface using React Native and Expo Router for fluid navigation.",
+          "Implementation of interactive dashboards with charts (line and pie) for data analysis using D3.js and React Native SVG.",
+          "Creation of a modern and standardized interface through NativeWind (Tailwind CSS) in conjunction with React Native Paper.",
+          "Structuring of reusable components such as dynamic tables, custom modals, and forms.",
+        ],
+        stackTitle: "Stack and Architecture:",
+        stack: [
+          "Mobile: React Native, Expo, TypeScript.",
+          "Styling & UI: NativeWind (Tailwind CSS), React Native Paper, React Native Elements.",
+          "Data Visualization: D3.js, React Native SVG.",
+          "Tools & Quality: Jest, ESLint, Prettier.",
+        ],
+      },
+
+      project3: {
+        title: "Form-to-Pipedrive Integration (PoC)",
+        description:
+          "Proof of Concept (PoC) for integrating custom forms with Pipedrive CRM, ensuring the sales team has detailed access to submitted information.",
+        contributionsTitle: "Key contributions:",
+        contributions: [
+          "Developed a complete integration flow via Pipedrive REST API: creating persons, leads, and HTML-formatted notes.",
+          "Built a modern and accessible interface using Next.js 15 (App Router), React 19, Tailwind CSS v4, and shadcn/ui.",
+          "Implemented Next.js Server Actions to securely manage requests on the backend, protecting API keys.",
+          "Structured a modular, scalable, and strictly typed codebase using TypeScript.",
+        ],
+        stackTitle: "Stack and Architecture:",
+        stack: [
+          "Frontend & Backend: Next.js (App Router), React 19, TypeScript.",
+          "Styling & UI: Tailwind CSS v4, shadcn/ui, Radix UI.",
+          "Integration: Pipedrive API v1, Axios.",
+          "Tools: pnpm.",
+        ],
+      },
+
       projectDesc:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec urna ac tellus volutpat viverra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.",
     },

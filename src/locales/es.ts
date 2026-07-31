@@ -112,6 +112,65 @@ export default {
     work: {
       badge: "Proyectos",
       title: "Algunos de los proyectos destacados que he construido:",
+      project1: {
+        title: "UserX Hub — Plataforma SaaS para UX Research & Producto",
+        description:
+          "Participé en el desarrollo de UserX Hub, una plataforma SaaS dirigida a equipos de UX Research, Producto y Research Operations, centralizando todo el ciclo de vida de las investigaciones con usuarios.",
+        contributionsTitle: "Principales contribuciones:",
+        contributions: [
+          "Evolución de funcionalidades para estudios no moderados (encuestas), incluyendo la creación de cuestionarios, experiencia de respuesta y gestión de datos.",
+          "Desarrollo de módulos para estudios moderados, programación de participantes y paneles financieros.",
+          "Implementación de funciones apoyadas por Inteligencia Artificial para asistencia en investigaciones.",
+        ],
+        stackTitle: "Stack y Arquitectura:",
+        stack: [
+          "Frontend: Next.js (App Router), React, TypeScript, Tailwind CSS, Radix UI.",
+          "Gestión de Estado y Datos: React Query, Zustand, Axios.",
+          "Formularios y Validación: React Hook Form, Zod.",
+          "Infraestructura y Calidad: Arquitectura modular por dominio, i18n, Sentry.",
+        ],
+      },
+
+      project2: {
+        title: "Virtual Process App — Gestión y Visualización de Datos Móviles",
+        description:
+          "Desarrollo de una aplicación móvil enfocada en la gestión de procesos y la visualización de datos, ofreciendo paneles interactivos y tablas de fácil navegación.",
+        contributionsTitle: "Principales contribuciones:",
+        contributions: [
+          "Desarrollo de toda la interfaz de usuario utilizando React Native y Expo Router para una navegación fluida.",
+          "Implementación de paneles interactivos con gráficos (líneas y circulares) para el análisis de datos utilizando D3.js y React Native SVG.",
+          "Creación de una interfaz moderna y estandarizada a través de NativeWind (Tailwind CSS) en conjunto con React Native Paper.",
+          "Estructuración de componentes reutilizables como tablas dinámicas, modales personalizados y formularios.",
+        ],
+        stackTitle: "Stack y Arquitectura:",
+        stack: [
+          "Móvil: React Native, Expo, TypeScript.",
+          "Estilización y UI: NativeWind (Tailwind CSS), React Native Paper, React Native Elements.",
+          "Visualización de Datos: D3.js, React Native SVG.",
+          "Herramientas y Calidad: Jest, ESLint, Prettier.",
+        ],
+      },
+
+      project3: {
+        title: "Integración Form-to-Pipedrive (PoC)",
+        description:
+          "Prueba de concepto (PoC) para integrar formularios personalizados con el CRM de Pipedrive, asegurando que el equipo comercial tenga acceso detallado a la información enviada.",
+        contributionsTitle: "Principales contribuciones:",
+        contributions: [
+          "Desarrollo de un flujo de integración completo a través de la API REST de Pipedrive: creación de personas, leads y notas formateadas en HTML.",
+          "Construcción de una interfaz moderna y accesible utilizando Next.js 15 (App Router), React 19, Tailwind CSS v4 y shadcn/ui.",
+          "Implementación de Server Actions de Next.js para gestionar las solicitudes de forma segura en el backend, protegiendo las claves de API.",
+          "Estructuración de un código modular, escalable y con tipado estricto utilizando TypeScript.",
+        ],
+        stackTitle: "Stack y Arquitectura:",
+        stack: [
+          "Frontend y Backend: Next.js (App Router), React 19, TypeScript.",
+          "Estilización y UI: Tailwind CSS v4, shadcn/ui, Radix UI.",
+          "Integración: Pipedrive API v1, Axios.",
+          "Herramientas: pnpm.",
+        ],
+      },
+
       projectDesc:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec urna ac tellus volutpat viverra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.",
     },
