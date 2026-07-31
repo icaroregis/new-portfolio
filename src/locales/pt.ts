@@ -80,7 +80,33 @@ export default {
           "Atividades Back-End: Desenvolvi APIs RESTful e GraphQL utilizando NestJS. Implementei regras de negócio e validações com Typescript, class-validator e class-transformer. Gerenciei políticas e permissões de acesso utilizando casl. Interagi com banco de dados relacional PostgreSQL através do ORM Prisma e zenstack. Implementei caching e otimização de performance com Redis. Participei de revisões de código.",
       },
       job3: {
-        bullet1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        bullet1:
+          "Atividades Front-End: Desenvolvi interfaces de usuário utilizando Next.js e React, com uso extensivo de React Hooks e componentização para criação de componentes reutilizáveis.",
+        bullet2:
+          "Implementei formulários dinâmicos com React Hook Form e validação através de Zod.",
+        bullet3:
+          "Gerenciei requisições HTTP com Axios e manipulei dados assíncronos com React Query, consumindo APIs REST no front-end.",
+        bullet4:
+          "Utilizei Typescript para adicionar tipagem estática ao código, garantindo maior robustez e manutenção.",
+        bullet5:
+          "Apliquei Clean Code e Design Patterns na construção de componentes e módulos, favorecendo reuso, legibilidade e manutenibilidade.",
+        bullet6:
+          "Escrevi testes unitários com Jest, seguindo práticas de BDD (Behavior Driven Development) para validação de cenários de uso e regras de negócio.",
+        bullet7:
+          "Criei componentes customizados (inputs, botões, modals, etc.) utilizando Radix, Prime React, font awesome e Tailwind CSS.",
+        bullet8:
+          "Colaborei na construção de um design system consistente e acessível, garantindo uma experiência de usuário intuitiva e responsiva.",
+        bullet9:
+          "Atividades Back-End: Desenvolvi APIs RESTful e GraphQL utilizando NestJS.",
+        bullet10: "Realizei testes unitários com Jest.",
+        bullet11:
+          "Implementei regras de negócio e validações com Typescript, class-validator e class-transformer.",
+        bullet12: "Gerenciei políticas e permissões de acesso utilizando casl.",
+        bullet13:
+          "Interagi com banco de dados relacional PostgreSQL através do ORM Prisma e zenstack.",
+        bullet14: "Implementei caching e otimização de performance com Redis.",
+        bullet15:
+          "Participei de revisões de código, testes automatizados e deploys contínuos, garantindo a qualidade e a entrega contínua das funcionalidades.",
       },
     },
     work: {

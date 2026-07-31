@@ -78,7 +78,34 @@ export default {
           "Back-End Activities: Developed RESTful and GraphQL APIs using NestJS. Implemented business rules and validations with Typescript, class-validator, and class-transformer. Managed access policies and permissions using casl. Interacted with PostgreSQL relational database through Prisma ORM and zenstack. Implemented caching and performance optimization with Redis. Participated in code reviews.",
       },
       job3: {
-        bullet1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        bullet1:
+          "Front-End Activities: Developed user interfaces using Next.js and React, with extensive use of React Hooks and componentization to create reusable components.",
+        bullet2:
+          "Implemented dynamic forms with React Hook Form and validation using Zod.",
+        bullet3:
+          "Managed HTTP requests with Axios and handled asynchronous data with React Query, consuming REST APIs on the front-end.",
+        bullet4:
+          "Used Typescript to add static typing to the code, ensuring greater robustness and maintainability.",
+        bullet5:
+          "Applied Clean Code and Design Patterns in building components and modules, promoting reuse, readability, and maintainability.",
+        bullet6:
+          "Wrote unit tests with Jest, following BDD (Behavior Driven Development) practices to validate use cases and business rules.",
+        bullet7:
+          "Created custom components (inputs, buttons, modals, etc.) using Radix, Prime React, Font Awesome, and Tailwind CSS.",
+        bullet8:
+          "Collaborated in building a consistent and accessible design system, ensuring an intuitive and responsive user experience.",
+        bullet9:
+          "Back-End Activities: Developed RESTful and GraphQL APIs using NestJS.",
+        bullet10: "Performed unit tests with Jest.",
+        bullet11:
+          "Implemented business rules and validations with Typescript, class-validator, and class-transformer.",
+        bullet12: "Managed access policies and permissions using casl.",
+        bullet13:
+          "Interacted with PostgreSQL relational database through Prisma ORM and zenstack.",
+        bullet14:
+          "Implemented caching and performance optimization with Redis.",
+        bullet15:
+          "Participated in code reviews, automated testing, and continuous deployments, ensuring quality and continuous delivery of features.",
       },
     },
     work: {

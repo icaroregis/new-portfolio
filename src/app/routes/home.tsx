@@ -486,7 +486,7 @@ export default function Home() {
                   className="inline-block transition-transform hover:scale-105"
                 >
                   <h4 className="text-xl font-bold tracking-tighter text-emerald-500 hover:text-emerald-400">
-                    userx
+                    F4G Sistemas e Soluções
                   </h4>
                 </a>
               </div>
@@ -496,6 +496,20 @@ export default function Home() {
                 </h3>
                 <ul className="flex list-inside list-disc flex-col gap-2 text-zinc-600 dark:text-zinc-400">
                   <li>{t("experience.job3.bullet1")}</li>
+                  <li>{t("experience.job3.bullet2")}</li>
+                  <li>{t("experience.job3.bullet3")}</li>
+                  <li>{t("experience.job3.bullet4")}</li>
+                  <li>{t("experience.job3.bullet5")}</li>
+                  <li>{t("experience.job3.bullet6")}</li>
+                  <li>{t("experience.job3.bullet7")}</li>
+                  <li>{t("experience.job3.bullet8")}</li>
+                  <li>{t("experience.job3.bullet9")}</li>
+                  <li>{t("experience.job3.bullet10")}</li>
+                  <li>{t("experience.job3.bullet11")}</li>
+                  <li>{t("experience.job3.bullet12")}</li>
+                  <li>{t("experience.job3.bullet13")}</li>
+                  <li>{t("experience.job3.bullet14")}</li>
+                  <li>{t("experience.job3.bullet15")}</li>
                 </ul>
               </div>
               <div className="text-left text-zinc-600 md:w-1/5 md:text-right dark:text-zinc-400">
