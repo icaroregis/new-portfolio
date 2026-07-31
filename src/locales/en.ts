@@ -170,6 +170,45 @@ export default {
         ],
       },
 
+      project4: {
+        title: "RabbitMQ & Node.js Tutorials",
+        description:
+          "Study repository focused on the implementation of asynchronous messaging using RabbitMQ and Node.js with the amqplib library.",
+        contributionsTitle: "Key learnings and implementations:",
+        contributions: [
+          "Implementation of messaging architectural patterns such as Publish/Subscribe (Direct, Fanout, Topic) and Work Queues.",
+          "Creation of producer and consumer scripts for background task processing.",
+          "Detailed documentation on using RabbitMQ with Docker and native installations, plus integrations with NestJS in production environments.",
+        ],
+        stackTitle: "Stack and Architecture:",
+        stack: [
+          "Backend: Node.js, JavaScript.",
+          "Messaging: RabbitMQ, amqplib.",
+          "Infrastructure: Docker.",
+        ],
+      },
+
+      project5: {
+        title: "Zustand Dashboard App",
+        description:
+          "Dashboard application developed for deepening and advanced application of Zustand in managing complex states.",
+        contributionsTitle: "Key learnings and implementations:",
+        contributions: [
+          "Complex global state management using Zustand, addressing state slicing (Slices Pattern).",
+          "Implementation of data persistence using custom Session Storage and Firebase Storage via middlewares.",
+          "Creation of a complete authentication system integrated with external services (Axios) and secure storage.",
+          "Immutable state manipulation using the Immer library in conjunction with Zustand.",
+          "Frontend integration with protected routes and navigation using React Router DOM.",
+        ],
+        stackTitle: "Stack and Architecture:",
+        stack: [
+          "Frontend: React 18, TypeScript, Vite.",
+          "Styling: Tailwind CSS, clsx, tailwind-merge.",
+          "State Management: Zustand, Immer.",
+          "Integrations & Tools: Axios, Firebase, React Router DOM, SweetAlert2.",
+        ],
+      },
+
       projectDesc:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec urna ac tellus volutpat viverra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.",
     },

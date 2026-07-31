@@ -171,6 +171,45 @@ export default {
         ],
       },
 
+      project4: {
+        title: "RabbitMQ & Node.js Tutorials",
+        description:
+          "Repositório de estudos focado na implementação de mensageria assíncrona utilizando RabbitMQ e Node.js com a biblioteca amqplib.",
+        contributionsTitle: "Principais aprendizados e implementações:",
+        contributions: [
+          "Implementação de padrões arquiteturais de mensageria como Publish/Subscribe (Direct, Fanout, Topic) e Work Queues.",
+          "Criação de scripts produtores e consumidores para processamento de tarefas em background.",
+          "Documentação detalhada sobre o uso do RabbitMQ com Docker e instalações nativas, além de integrações com NestJS em ambientes de produção.",
+        ],
+        stackTitle: "Stack e Arquitetura:",
+        stack: [
+          "Backend: Node.js, JavaScript.",
+          "Mensageria: RabbitMQ, amqplib.",
+          "Infraestrutura: Docker.",
+        ],
+      },
+
+      project5: {
+        title: "Zustand Dashboard App",
+        description:
+          "Aplicação de dashboard desenvolvida para aprofundamento e aplicação avançada do Zustand no gerenciamento de estados complexos.",
+        contributionsTitle: "Principais aprendizados e implementações:",
+        contributions: [
+          "Gerenciamento de estado global complexo utilizando Zustand, abordando fatiamento de estado (Slices Pattern).",
+          "Implementação de persistência de dados utilizando Session Storage e Firebase Storage customizados via middlewares.",
+          "Criação de um sistema completo de autenticação integrado com serviços externos (Axios) e armazenamento seguro.",
+          "Manipulação de estados imutáveis utilizando a biblioteca Immer em conjunto com Zustand.",
+          "Integração do frontend com rotas protegidas e navegação usando React Router DOM.",
+        ],
+        stackTitle: "Stack e Arquitetura:",
+        stack: [
+          "Frontend: React 18, TypeScript, Vite.",
+          "Estilização: Tailwind CSS, clsx, tailwind-merge.",
+          "Gerenciamento de Estado: Zustand, Immer.",
+          "Integrações & Ferramentas: Axios, Firebase, React Router DOM, SweetAlert2.",
+        ],
+      },
+
       projectDesc:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec urna ac tellus volutpat viverra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.",
     },
