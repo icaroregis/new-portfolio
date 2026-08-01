@@ -3,6 +3,7 @@ export default {
     nav: {
       about: "About",
       work: "Work",
+      courses: "Courses",
       professionalExperience: "Professional Experience",
       contact: "Contact",
       downloadCV: "Download CV",
@@ -214,6 +215,35 @@ export default {
 
       projectDesc:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec urna ac tellus volutpat viverra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.",
+    },
+    courses: {
+      badge: "Courses",
+      title:
+        "A selection of courses that strengthened my foundation in frontend, backend, React, and core JavaScript concepts.",
+      items: {
+        htmlCss:
+          "A solid base in semantic structure, styling, responsiveness, and page organization with good HTML and CSS practices.",
+        cssFlexbox:
+          "Focused on alignment, element distribution, and building flexible, responsive layouts with Flexbox.",
+        nodeJs:
+          "Introduction to the Node.js ecosystem, modules, basic APIs, server-side JavaScript execution, and async flow.",
+        typescript:
+          "Static typing applied to JavaScript, with interfaces, reusable types, and more predictable code.",
+        reactHooks:
+          "Deeper study of useState, useEffect, useMemo, useCallback, and hook composition for reusable components.",
+        nodeFundamentals:
+          "Core backend concepts with Node, including file handling, modules, events, and simple service building.",
+        reactNativeExpo:
+          "Fundamentals for building mobile apps with React Native and Expo, including components, navigation, and native features.",
+        zustand:
+          "Global state management with Zustand, store organization, data updates, and integration with React applications.",
+        iteratingData:
+          "Hands-on practice with loops, map, filter, and reduce to iterate, transform, and organize data collections in JavaScript.",
+        dataStructures:
+          "Introduction to arrays, queues, stacks, and other simple structures to improve problem solving and data modeling.",
+        hashing:
+          "Understanding hashing, dictionaries, and sets for fast lookup, duplicate control, and efficient JavaScript structures.",
+      },
     },
     contact: {
       badge: "Get in touch",

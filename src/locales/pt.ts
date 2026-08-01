@@ -3,6 +3,7 @@ export default {
     nav: {
       about: "Sobre",
       work: "Projetos",
+      courses: "Cursos",
       professionalExperience: "Experiência Profissional",
       contact: "Contato",
       downloadCV: "Baixar CV",
@@ -215,6 +216,35 @@ export default {
 
       projectDesc:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec urna ac tellus volutpat viverra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.",
+    },
+    courses: {
+      badge: "Cursos",
+      title:
+        "Alguns cursos e formações que reforçaram minha base em frontend, backend, React e fundamentos de JavaScript.",
+      items: {
+        htmlCss:
+          "Base sólida em estrutura semântica, estilização, responsividade e organização de páginas com boas práticas de HTML e CSS.",
+        cssFlexbox:
+          "Foco em alinhamento, distribuição de elementos e construção de layouts flexíveis e responsivos com Flexbox.",
+        nodeJs:
+          "Introdução ao ecossistema Node.js, módulos, APIs básicas, execução JavaScript no servidor e fluxo assíncrono.",
+        typescript:
+          "Tipagem estática aplicada ao JavaScript, criação de interfaces, tipos reutilizáveis e código mais previsível.",
+        reactHooks:
+          "Aprofundamento em useState, useEffect, useMemo, useCallback e composição de hooks para componentes reutilizáveis.",
+        nodeFundamentals:
+          "Conceitos essenciais de backend com Node, manipulação de arquivos, módulos, eventos e construção de serviços simples.",
+        reactNativeExpo:
+          "Fundamentos para criar apps mobile com React Native e Expo, incluindo componentes, navegação e integração com recursos nativos.",
+        zustand:
+          "Gerenciamento de estado global com Zustand, organização de stores, atualização de dados e integração com aplicações React.",
+        iteratingData:
+          "Prática com loops, map, filter e reduce para percorrer, transformar e organizar coleções de dados em JavaScript.",
+        dataStructures:
+          "Introdução a arrays, filas, pilhas e outras estruturas simples para melhorar raciocínio lógico e modelagem de dados.",
+        hashing:
+          "Entendimento de hashing, dicionários e sets para buscas rápidas, controle de duplicidade e estruturas eficientes em JavaScript.",
+      },
     },
     contact: {
       badge: "Entrar em contato",

@@ -22,6 +22,7 @@ import {
   TestTube,
   CloudLightning,
   Database,
+  BookOpen,
 } from "lucide-react";
 
 import {
@@ -100,6 +101,64 @@ export default function Home() {
   const toggleLanguage = (lang: string | null) => {
     if (lang) i18n.changeLanguage(lang);
   };
+
+  const courses = [
+    {
+      title: "HTML e CSS",
+      image: encodeURI("/html e css.png"),
+      description: t("courses.items.htmlCss"),
+    },
+    {
+      title: "CSS Flexbox",
+      image: encodeURI("/css-flexbox.png"),
+      description: t("courses.items.cssFlexbox"),
+    },
+    {
+      title: "Node.js",
+      image: encodeURI("/nodejs.jpeg"),
+      description: t("courses.items.nodeJs"),
+    },
+    {
+      title: "TypeScript",
+      image: encodeURI("/typesdript.jpeg"),
+      description: t("courses.items.typescript"),
+    },
+    {
+      title: "Aprofundando em Hooks do React",
+      image: encodeURI("/Aprofundando em hooks do React.jpeg"),
+      description: t("courses.items.reactHooks"),
+    },
+    {
+      title: "Fundamentos de Node",
+      image: encodeURI("/Fundamentos node.jpeg"),
+      description: t("courses.items.nodeFundamentals"),
+    },
+    {
+      title: "Fundamentos React Native com Expo",
+      image: encodeURI("/Fundamentos React Native com Expo.jpeg"),
+      description: t("courses.items.reactNativeExpo"),
+    },
+    {
+      title: "Zustand: Gestor de estados para React",
+      image: encodeURI("/Zustand Gestor de estados para React.jpeg"),
+      description: t("courses.items.zustand"),
+    },
+    {
+      title: "Iterating Over Data in JavaScript",
+      image: encodeURI("/Iterating Over Data in JavaScript.jpeg"),
+      description: t("courses.items.iteratingData"),
+    },
+    {
+      title: "Learning Simple Data Structures in JavaScript",
+      image: encodeURI("/Learning Simple Data Structures in JavaScript.jpeg"),
+      description: t("courses.items.dataStructures"),
+    },
+    {
+      title: "Hashing, Dictionaries, and Sets in JS",
+      image: encodeURI("/Hashing, Dictionaries, and Sets in JS.jpeg"),
+      description: t("courses.items.hashing"),
+    },
+  ];
 
   const renderTechTags = (tags: string[]) => (
     <div className="flex flex-wrap gap-2">
@@ -183,6 +242,12 @@ export default function Home() {
               className="text-sm font-medium text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
             >
               {t("nav.work")}
+            </a>
+            <a
+              href="#courses"
+              className="text-sm font-medium text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
+            >
+              {t("nav.courses")}
             </a>
             <a
               href="#professional_experience"
@@ -274,6 +339,13 @@ export default function Home() {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {t("nav.work")}
+              </a>
+              <a
+                href="#courses"
+                className="text-sm font-medium text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {t("nav.courses")}
               </a>
               <a
                 href="#professional_experience"
@@ -900,6 +972,59 @@ export default function Home() {
                 })}
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* COURSES SECTION */}
+      <section
+        id="courses"
+        className="bg-zinc-100/50 px-6 py-24 md:px-16 dark:bg-zinc-900/50"
+      >
+        <div className="mx-auto flex max-w-7xl flex-col items-center">
+          <Badge
+            variant="secondary"
+            className="mb-6 rounded-full bg-zinc-200 px-4 py-1 text-sm text-zinc-700 hover:bg-zinc-300 dark:bg-zinc-800 dark:text-zinc-300 dark:hover:bg-zinc-700"
+          >
+            {t("courses.badge")}
+          </Badge>
+          <p className="mb-12 max-w-3xl text-center text-lg text-zinc-600 md:text-xl dark:text-zinc-400">
+            {t("courses.title")}
+          </p>
+
+          <div className="grid w-full grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
+            {courses.map((course) => (
+              <article
+                key={course.title}
+                className="group overflow-hidden rounded-xl border border-zinc-200 bg-white shadow-sm transition-transform duration-300 hover:-translate-y-1 dark:border-zinc-800 dark:bg-zinc-900 dark:shadow-lg"
+              >
+                <div className="border-b border-zinc-200 bg-zinc-100/70 p-4 dark:border-zinc-800 dark:bg-zinc-800/40">
+                  <img
+                    src={course.image}
+                    alt={course.title}
+                    className="h-56 w-full rounded-lg object-cover shadow-sm"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div className="flex flex-col gap-4 p-6">
+                  <div className="flex items-start gap-3">
+                    <div className="rounded-lg bg-emerald-500/10 p-2 text-emerald-600 dark:text-emerald-400">
+                      <BookOpen className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-100">
+                        {course.title}
+                      </h3>
+                    </div>
+                  </div>
+
+                  <p className="text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+                    {course.description}
+                  </p>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
