@@ -102,9 +102,12 @@ export default function Home() {
     <div className="min-h-screen bg-zinc-50 font-sans text-zinc-900 transition-colors duration-300 dark:bg-zinc-950 dark:text-zinc-50">
       {/* HEADER / NAVBAR */}
       <header className="sticky top-0 z-50 flex items-center justify-between border-b border-zinc-200 bg-white/80 px-6 py-4 backdrop-blur-md md:px-16 dark:border-zinc-800 dark:bg-zinc-950/80">
-        <div className="font-['JetBrains_Mono'] text-2xl font-bold tracking-tighter text-emerald-500">
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="cursor-pointer font-['JetBrains_Mono'] text-2xl font-bold tracking-tighter text-emerald-500 transition-opacity hover:opacity-80"
+        >
           {"<ICARO ALMEIDA/>"}
-        </div>
+        </button>
 
         {/* Desktop Nav */}
         <nav className="hidden items-center gap-8 md:flex">
@@ -191,7 +194,7 @@ export default function Home() {
         <div className="order-2 flex flex-col gap-8 md:order-1">
           <h1 className="text-4xl font-bold tracking-tight md:text-6xl">
             {t("hero.greeting")}{" "}
-            <span className="inline-block origin-[70%_70%] cursor-default hover:animate-bounce">
+            <span className="animate-wave inline-block origin-[70%_70%] cursor-default">
               👋
             </span>
           </h1>
