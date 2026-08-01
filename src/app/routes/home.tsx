@@ -117,50 +117,78 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-zinc-50 font-sans text-zinc-900 transition-colors duration-300 dark:bg-zinc-950 dark:text-zinc-50">
       {/* HEADER / NAVBAR */}
-      <header className="sticky top-0 z-50 flex items-center justify-between border-b border-zinc-200 bg-white/80 px-6 py-4 backdrop-blur-md md:px-16 dark:border-zinc-800 dark:bg-zinc-950/80">
-        <button
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="cursor-pointer font-['JetBrains_Mono'] text-2xl font-bold tracking-tighter text-emerald-500 transition-opacity hover:opacity-80"
-        >
-          {"<ICARO ALMEIDA/>"}
-        </button>
+      <div className="sticky top-0 z-50">
+        <header className="relative flex items-center justify-between border-b border-zinc-200 bg-white/80 px-6 py-4 backdrop-blur-md md:px-16 dark:border-zinc-800 dark:bg-zinc-950/80">
+          <button
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="cursor-pointer font-['JetBrains_Mono'] text-2xl font-bold tracking-tighter text-emerald-500 transition-opacity hover:opacity-80 max-[400px]:text-xl"
+          >
+            {"<ICARO ALMEIDA/>"}
+          </button>
 
-        {/* Desktop Nav */}
-        <nav className="hidden items-center gap-8 md:flex">
-          <a
-            href="#about"
-            className="text-sm font-medium text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
-          >
-            {t("nav.about")}
-          </a>
-          <a
-            href="#work"
-            className="text-sm font-medium text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
-          >
-            {t("nav.work")}
-          </a>
-          <a
-            href="#professional_experience"
-            className="text-sm font-medium text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
-          >
-            {t("nav.professionalExperience")}
-          </a>
-          <a
-            href="#contact"
-            className="text-sm font-medium text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
-          >
-            {t("nav.contact")}
-          </a>
+          {/* Desktop Nav */}
+          <nav className="hidden items-center gap-8 md:flex">
+            <a
+              href="#about"
+              className="text-sm font-medium text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
+            >
+              {t("nav.about")}
+            </a>
+            <a
+              href="#work"
+              className="text-sm font-medium text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
+            >
+              {t("nav.work")}
+            </a>
+            <a
+              href="#professional_experience"
+              className="text-sm font-medium text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
+            >
+              {t("nav.professionalExperience")}
+            </a>
+            <a
+              href="#contact"
+              className="text-sm font-medium text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
+            >
+              {t("nav.contact")}
+            </a>
 
-          <div className="h-6 w-px bg-zinc-300 dark:bg-zinc-800"></div>
+            <div className="h-6 w-px bg-zinc-300 dark:bg-zinc-800"></div>
 
-          <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4">
+              <ThemeToggle />
+              <Select
+                value={i18n.resolvedLanguage || "pt"}
+                onValueChange={toggleLanguage}
+              >
+                <SelectTrigger className="h-9 w-[80px] border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-900">
+                  <SelectValue placeholder="Lang" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="en">EN</SelectItem>
+                  <SelectItem value="pt">PT</SelectItem>
+                  <SelectItem value="es">ES</SelectItem>
+                </SelectContent>
+              </Select>
+              <a
+                href="https://drive.google.com/file/d/1e9Cm8Nb8JSvctGFN1tbMYWXk4QjaiHKv/view?usp=drive_link"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="focus-visible:ring-ring inline-flex h-9 items-center justify-center rounded-md bg-zinc-900 px-4 py-2 text-sm font-medium text-zinc-50 shadow transition-colors hover:bg-zinc-800 focus-visible:ring-1 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-200"
+              >
+                {t("nav.downloadCV")}
+              </a>
+            </div>
+          </nav>
+
+          {/* Mobile Menu Icon */}
+          <div className="flex items-center gap-2 md:hidden">
             <ThemeToggle />
             <Select
               value={i18n.resolvedLanguage || "pt"}
               onValueChange={toggleLanguage}
             >
-              <SelectTrigger className="h-9 w-[80px] border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-900">
+              <SelectTrigger className="h-9 w-[70px] border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-900">
                 <SelectValue placeholder="Lang" />
               </SelectTrigger>
               <SelectContent>
@@ -169,93 +197,67 @@ export default function Home() {
                 <SelectItem value="es">ES</SelectItem>
               </SelectContent>
             </Select>
-            <a
-              href="https://drive.google.com/file/d/1e9Cm8Nb8JSvctGFN1tbMYWXk4QjaiHKv/view?usp=drive_link"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="focus-visible:ring-ring inline-flex h-9 items-center justify-center rounded-md bg-zinc-900 px-4 py-2 text-sm font-medium text-zinc-50 shadow transition-colors hover:bg-zinc-800 focus-visible:ring-1 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-200"
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setIsMobileMenuOpen((current) => !current)}
+              aria-label={
+                isMobileMenuOpen ? "Fechar menu mobile" : "Abrir menu mobile"
+              }
             >
-              {t("nav.downloadCV")}
-            </a>
+              {isMobileMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
+            </Button>
           </div>
-        </nav>
+        </header>
 
-        {/* Mobile Menu Icon */}
-        <div className="flex items-center gap-2 md:hidden">
-          <ThemeToggle />
-          <Select
-            value={i18n.resolvedLanguage || "pt"}
-            onValueChange={toggleLanguage}
-          >
-            <SelectTrigger className="h-9 w-[70px] border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-900">
-              <SelectValue placeholder="Lang" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="en">EN</SelectItem>
-              <SelectItem value="pt">PT</SelectItem>
-              <SelectItem value="es">ES</SelectItem>
-            </SelectContent>
-          </Select>
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={() => setIsMobileMenuOpen((current) => !current)}
-            aria-label={
-              isMobileMenuOpen ? "Fechar menu mobile" : "Abrir menu mobile"
-            }
-          >
-            {isMobileMenuOpen ? (
-              <X className="h-6 w-6" />
-            ) : (
-              <Menu className="h-6 w-6" />
-            )}
-          </Button>
-        </div>
-      </header>
-
-      {isMobileMenuOpen && (
-        <div className="sticky top-[73px] z-40 border-b border-zinc-200 bg-white/95 px-6 py-4 backdrop-blur-md md:hidden dark:border-zinc-800 dark:bg-zinc-950/95">
-          <nav className="flex flex-col gap-3">
-            <a
-              href="#about"
-              className="text-sm font-medium text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              {t("nav.about")}
-            </a>
-            <a
-              href="#work"
-              className="text-sm font-medium text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              {t("nav.work")}
-            </a>
-            <a
-              href="#professional_experience"
-              className="text-sm font-medium text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              {t("nav.professionalExperience")}
-            </a>
-            <a
-              href="#contact"
-              className="text-sm font-medium text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              {t("nav.contact")}
-            </a>
-            <a
-              href="https://drive.google.com/file/d/1e9Cm8Nb8JSvctGFN1tbMYWXk4QjaiHKv/view?usp=drive_link"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="focus-visible:ring-ring mt-2 inline-flex h-9 items-center justify-center rounded-md bg-zinc-900 px-4 py-2 text-sm font-medium text-zinc-50 shadow transition-colors hover:bg-zinc-800 focus-visible:ring-1 focus-visible:outline-none dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-200"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              {t("nav.downloadCV")}
-            </a>
-          </nav>
-        </div>
-      )}
+        {isMobileMenuOpen && (
+          <div className="absolute top-full right-0 left-0 border-b border-zinc-200 bg-white/95 px-6 py-4 backdrop-blur-md md:hidden dark:border-zinc-800 dark:bg-zinc-950/95">
+            <nav className="flex flex-col gap-3">
+              <a
+                href="#about"
+                className="text-sm font-medium text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {t("nav.about")}
+              </a>
+              <a
+                href="#work"
+                className="text-sm font-medium text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {t("nav.work")}
+              </a>
+              <a
+                href="#professional_experience"
+                className="text-sm font-medium text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {t("nav.professionalExperience")}
+              </a>
+              <a
+                href="#contact"
+                className="text-sm font-medium text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {t("nav.contact")}
+              </a>
+              <a
+                href="https://drive.google.com/file/d/1e9Cm8Nb8JSvctGFN1tbMYWXk4QjaiHKv/view?usp=drive_link"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="focus-visible:ring-ring mt-2 inline-flex h-9 items-center justify-center rounded-md bg-zinc-900 px-4 py-2 text-sm font-medium text-zinc-50 shadow transition-colors hover:bg-zinc-800 focus-visible:ring-1 focus-visible:outline-none dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-200"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {t("nav.downloadCV")}
+              </a>
+            </nav>
+          </div>
+        )}
+      </div>
 
       {/* HERO SECTION */}
       <section
