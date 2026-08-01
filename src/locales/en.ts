@@ -220,6 +220,8 @@ export default {
       badge: "Courses",
       title:
         "A selection of courses that strengthened my foundation in frontend, backend, React, and core JavaScript concepts.",
+      clickToExpand: "Click the image to enlarge the certificate.",
+      openCertificate: "Open certificate for {{course}}",
       items: {
         htmlCss:
           "A solid base in semantic structure, styling, responsiveness, and page organization with good HTML and CSS practices.",

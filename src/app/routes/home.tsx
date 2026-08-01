@@ -3,6 +3,12 @@ import type { Route } from "./+types/home";
 import { Badge } from "@/components/ui/badge";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogTitle,
+} from "@/components/ui/dialog";
 
 import {
   MapPin,
@@ -77,6 +83,11 @@ export default function Home() {
   const { t, i18n } = useTranslation();
   const [copiedItem, setCopiedItem] = useState<string | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [selectedCourse, setSelectedCourse] = useState<{
+    title: string;
+    image: string;
+    description: string;
+  } | null>(null);
 
   const handleCopy = (text: string) => {
     navigator.clipboard.writeText(text);
@@ -999,12 +1010,21 @@ export default function Home() {
                 className="group overflow-hidden rounded-xl border border-zinc-200 bg-white shadow-sm transition-transform duration-300 hover:-translate-y-1 dark:border-zinc-800 dark:bg-zinc-900 dark:shadow-lg"
               >
                 <div className="border-b border-zinc-200 bg-zinc-100/70 p-4 dark:border-zinc-800 dark:bg-zinc-800/40">
-                  <img
-                    src={course.image}
-                    alt={course.title}
-                    className="h-56 w-full rounded-lg object-cover shadow-sm"
-                    loading="lazy"
-                  />
+                  <button
+                    type="button"
+                    className="w-full cursor-pointer rounded-lg text-left outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-zinc-900"
+                    onClick={() => setSelectedCourse(course)}
+                    aria-label={t("courses.openCertificate", {
+                      course: course.title,
+                    })}
+                  >
+                    <img
+                      src={course.image}
+                      alt={course.title}
+                      className="h-56 w-full rounded-lg object-cover shadow-sm transition duration-300 group-hover:scale-[1.02]"
+                      loading="lazy"
+                    />
+                  </button>
                 </div>
 
                 <div className="flex flex-col gap-4 p-6">
@@ -1022,12 +1042,46 @@ export default function Home() {
                   <p className="text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
                     {course.description}
                   </p>
+
+                  <span className="text-sm font-medium text-emerald-600 dark:text-emerald-400">
+                    {t("courses.clickToExpand")}
+                  </span>
                 </div>
               </article>
             ))}
           </div>
         </div>
       </section>
+
+      <Dialog
+        open={Boolean(selectedCourse)}
+        onOpenChange={(open) => {
+          if (!open) setSelectedCourse(null);
+        }}
+      >
+        <DialogContent className="h-[94vh] max-h-[94vh] w-[calc(100vw-1rem)] max-w-[calc(100vw-1rem)] overflow-hidden border border-zinc-200 bg-white p-0 sm:h-[92vh] sm:max-h-[92vh] sm:w-[min(90vw,1180px)] sm:max-w-[min(90vw,1180px)] dark:border-zinc-800 dark:bg-zinc-950">
+          {selectedCourse ? (
+            <div className="flex h-full flex-col">
+              <div className="border-b border-zinc-200 px-4 py-3 sm:px-5 sm:py-4 dark:border-zinc-800">
+                <DialogTitle className="text-xl font-bold text-zinc-900 dark:text-zinc-100">
+                  {selectedCourse.title}
+                </DialogTitle>
+                <DialogDescription className="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+                  {selectedCourse.description}
+                </DialogDescription>
+              </div>
+
+              <div className="flex flex-1 items-center justify-center overflow-auto bg-zinc-100 p-2 sm:p-3 dark:bg-zinc-900">
+                <img
+                  src={selectedCourse.image}
+                  alt={selectedCourse.title}
+                  className="h-auto max-h-full w-auto max-w-full rounded-lg border border-zinc-200 bg-white object-contain shadow-sm dark:border-zinc-800 dark:bg-zinc-950"
+                />
+              </div>
+            </div>
+          ) : null}
+        </DialogContent>
+      </Dialog>
 
       {/* FOOTER / CONTACT PLACEHOLDER */}
       <footer id="contact" className="px-6 py-24 text-center md:px-16">

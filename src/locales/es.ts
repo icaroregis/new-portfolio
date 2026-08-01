@@ -221,6 +221,8 @@ export default {
       badge: "Cursos",
       title:
         "Una selección de cursos que fortalecieron mi base en frontend, backend, React y fundamentos clave de JavaScript.",
+      clickToExpand: "Haz clic en la imagen para ampliar el certificado.",
+      openCertificate: "Abrir certificado del curso {{course}}",
       items: {
         htmlCss:
           "Base sólida en estructura semántica, estilos, responsividad y organización de páginas con buenas prácticas de HTML y CSS.",

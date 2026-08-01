@@ -221,6 +221,8 @@ export default {
       badge: "Cursos",
       title:
         "Alguns cursos e formações que reforçaram minha base em frontend no ecossistema Javascript e Typescript.",
+      clickToExpand: "Clique na imagem para ampliar o certificado.",
+      openCertificate: "Abrir certificado do curso {{course}}",
       items: {
         htmlCss:
           "Base sólida em estrutura semântica, estilização, responsividade e organização de páginas com boas práticas de HTML e CSS.",
