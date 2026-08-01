@@ -112,6 +112,9 @@ export default {
     work: {
       badge: "Projetos",
       title: "Alguns dos projetos notáveis que construí:",
+      privateRepository: "Repositório privado",
+      viewCode: "Ver código",
+      viewCodeGithub: "Ver código no GitHub",
       project1: {
         title: "UserX Hub — Plataforma SaaS para UX Research & Produto",
         description:
