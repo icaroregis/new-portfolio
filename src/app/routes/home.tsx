@@ -9,6 +9,7 @@ import {
   Menu,
   Sun,
   Moon,
+  X,
   Code,
   Blocks,
   FileText,
@@ -73,6 +74,7 @@ function ThemeToggle() {
 export default function Home() {
   const { t, i18n } = useTranslation();
   const [copiedItem, setCopiedItem] = useState<string | null>(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const handleCopy = (text: string) => {
     navigator.clipboard.writeText(text);
@@ -194,11 +196,66 @@ export default function Home() {
               <SelectItem value="es">ES</SelectItem>
             </SelectContent>
           </Select>
-          <Button variant="ghost" size="icon">
-            <Menu className="h-6 w-6" />
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => setIsMobileMenuOpen((current) => !current)}
+            aria-label={
+              isMobileMenuOpen ? "Fechar menu mobile" : "Abrir menu mobile"
+            }
+          >
+            {isMobileMenuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <Menu className="h-6 w-6" />
+            )}
           </Button>
         </div>
       </header>
+
+      {isMobileMenuOpen && (
+        <div className="sticky top-[73px] z-40 border-b border-zinc-200 bg-white/95 px-6 py-4 backdrop-blur-md md:hidden dark:border-zinc-800 dark:bg-zinc-950/95">
+          <nav className="flex flex-col gap-3">
+            <a
+              href="#about"
+              className="text-sm font-medium text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              {t("nav.about")}
+            </a>
+            <a
+              href="#work"
+              className="text-sm font-medium text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              {t("nav.work")}
+            </a>
+            <a
+              href="#professional_experience"
+              className="text-sm font-medium text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              {t("nav.professionalExperience")}
+            </a>
+            <a
+              href="#contact"
+              className="text-sm font-medium text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              {t("nav.contact")}
+            </a>
+            <a
+              href="https://drive.google.com/file/d/1e9Cm8Nb8JSvctGFN1tbMYWXk4QjaiHKv/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="focus-visible:ring-ring mt-2 inline-flex h-9 items-center justify-center rounded-md bg-zinc-900 px-4 py-2 text-sm font-medium text-zinc-50 shadow transition-colors hover:bg-zinc-800 focus-visible:ring-1 focus-visible:outline-none dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-200"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              {t("nav.downloadCV")}
+            </a>
+          </nav>
+        </div>
+      )}
 
       {/* HERO SECTION */}
       <section
