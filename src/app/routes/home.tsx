@@ -847,7 +847,7 @@ export default function Home() {
           {t("contact.title")}
         </p>
         <div className="mb-16 flex flex-col items-center gap-4">
-          <div className="flex items-center gap-4 text-2xl font-bold md:text-4xl">
+          <div className="flex max-w-full items-center justify-center gap-4 text-2xl font-bold max-[500px]:flex-wrap max-[500px]:gap-2 max-[500px]:text-sm md:text-4xl">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="32"
@@ -863,7 +863,9 @@ export default function Home() {
               <rect width="20" height="16" x="2" y="4" rx="2" />
               <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
             </svg>
-            icaroregisalmeida@gmail.com
+            <span className="max-[500px]:w-full max-[500px]:text-center max-[500px]:break-all">
+              icaroregisalmeida@gmail.com
+            </span>
             <Button
               variant="ghost"
               size="icon"
@@ -903,7 +905,7 @@ export default function Home() {
               )}
             </Button>
           </div>
-          <div className="flex items-center gap-4 text-2xl font-bold md:text-4xl">
+          <div className="flex max-w-full items-center justify-center gap-4 text-2xl font-bold max-[500px]:flex-wrap max-[500px]:gap-2 max-[500px]:text-base md:text-4xl">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="32"
@@ -919,7 +921,9 @@ export default function Home() {
               <rect width="14" height="20" x="5" y="2" rx="2" ry="2" />
               <path d="M12 18h.01" />
             </svg>
-            +55 (85) 99131-6112
+            <span className="max-[500px]:w-full max-[500px]:text-center">
+              +55 (85) 99131-6112
+            </span>
             <Button
               variant="ghost"
               size="icon"
