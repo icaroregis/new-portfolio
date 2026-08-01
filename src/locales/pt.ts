@@ -220,7 +220,7 @@ export default {
     courses: {
       badge: "Cursos",
       title:
-        "Alguns cursos e formações que reforçaram minha base em frontend, backend, React e fundamentos de JavaScript.",
+        "Alguns cursos e formações que reforçaram minha base em frontend no ecossistema Javascript e Typescript.",
       items: {
         htmlCss:
           "Base sólida em estrutura semântica, estilização, responsividade e organização de páginas com boas práticas de HTML e CSS.",
