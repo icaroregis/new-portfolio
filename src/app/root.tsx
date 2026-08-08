@@ -26,13 +26,25 @@ export const links: Route.LinksFunction = () => [
   },
 ];
 
+const themeInitializerScript = `
+  (() => {
+    const root = document.documentElement;
+    const savedTheme = localStorage.getItem("theme");
+    const isDarkMode = savedTheme !== "light";
+
+    root.classList.toggle("dark", isDarkMode);
+    root.style.colorScheme = isDarkMode ? "dark" : "light";
+  })();
+`;
+
 export function Layout({ children }: { children: React.ReactNode }) {
   const { i18n } = useTranslation();
   return (
-    <html lang={i18n.resolvedLanguage || "pt"}>
+    <html lang={i18n.resolvedLanguage || "pt"} suppressHydrationWarning>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script dangerouslySetInnerHTML={{ __html: themeInitializerScript }} />
         <Meta />
         <Links />
       </head>

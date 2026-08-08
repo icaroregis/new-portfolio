@@ -58,10 +58,12 @@ function ThemeToggle() {
     const root = document.documentElement;
     if (root.classList.contains("dark")) {
       root.classList.remove("dark");
+      root.style.colorScheme = "light";
       localStorage.setItem("theme", "light");
       setIsDark(false);
     } else {
       root.classList.add("dark");
+      root.style.colorScheme = "dark";
       localStorage.setItem("theme", "dark");
       setIsDark(true);
     }
@@ -72,7 +74,7 @@ function ThemeToggle() {
       variant="ghost"
       size="icon"
       onClick={toggleTheme}
-      className="text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
+      className="cursor-pointer text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
     >
       {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
     </Button>
@@ -99,14 +101,15 @@ export default function Home() {
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia(
-      "(prefers-color-scheme: dark)",
-    ).matches;
-    if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
+    const isDarkMode = savedTheme !== "light";
+
+    if (isDarkMode) {
       document.documentElement.classList.add("dark");
     } else {
       document.documentElement.classList.remove("dark");
     }
+
+    document.documentElement.style.colorScheme = isDarkMode ? "dark" : "light";
   }, []);
 
   const toggleLanguage = (lang: string | null) => {
@@ -291,7 +294,7 @@ export default function Home() {
                 </SelectContent>
               </Select>
               <a
-                href="https://drive.google.com/file/d/1BQXtxuHEJfyRFtSrRCA4vCHcwCBfSurA/view?usp=sharing"
+                href="https://drive.google.com/file/d/1h2njPLd1TNSYPIaqen_Lnn0xylVQYwKk/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="focus-visible:ring-ring inline-flex h-9 items-center justify-center rounded-md bg-zinc-900 px-4 py-2 text-sm font-medium text-zinc-50 shadow transition-colors hover:bg-zinc-800 focus-visible:ring-1 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-200"
